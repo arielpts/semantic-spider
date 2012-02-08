@@ -7,7 +7,7 @@ class Anemone::Page
   def in_domain?(uri)
     same_domain = uri.host == @url.host
 
-    if (!same_domain && (uri.host == 'www.midiasemmascara.org' or uri.host == 'www.midiasemmascara.com.br' or uri.host == 'midiasemmascara.org'))
+    if (!same_domain && (uri.host == 'www.xxx.org' or uri.host == 'www.xxx.com.br' or uri.host == 'xxx.org'))
 
       external_url = {
        referer: {
@@ -35,7 +35,7 @@ links.find.each do |f|
     uri = 'http://' + f['links_sum.host']
     puts uri
     # Primeira Passada
-    #    crawl = Anemone.crawl("http://www.midiasemmascara.org/", {
+    #    crawl = Anemone.crawl("http://www.xxx.org/", {
     # Segunda Passada
       crawl = Anemone.crawl(uri, {
         :depth_limit => 2,
